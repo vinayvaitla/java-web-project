@@ -8,11 +8,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                deploy adapters: [tomcat7(credentialsId: '88bb4bd0-78a7-4184-88a2-11cc70a44662', 
-                path: '', 
-                url: 'http://3.109.184.237:8080/')], 
-                contextPath: 'javawebapp1', 
-                war: '**/java-web-project.war'
+                deploy adapters: [tomcat7(credentialsId: 'ab53f948-4c5c-4ae5-a480-2c1ad4dd55da', path: '', url: 'http://3.109.184.237:8080/')], contextPath: 'javawebapp1', war: '**/java-web-project.war'
             }
         }
     }
